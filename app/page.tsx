@@ -29,7 +29,7 @@ export default function HomePage() {
           {/* Main Question */}
           <div className="space-y-10">
             <h2 className="text-5xl md:text-3xl lg:text-5xl font-mono text-white leading-tight">
-              where did the{" "}
+              where did your{" "}
               <span
                 className="font-serif font-bold italic hover:animate-pulse cursor-pointer transition-all duration-300 hover:font-sans hover:not-italic hover:font-normal"
                 style={{
