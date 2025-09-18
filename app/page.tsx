@@ -64,8 +64,8 @@ export default function HomePage() {
               <button 
                 onClick={() => {
                   const link = document.createElement('a')
-                  link.href = '/DPWRK.zip'
-                  link.download = 'DPWRK.zip'
+                  link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
+                  link.download = 'DPWRK.dmg'
                   document.body.appendChild(link)
                   link.click()
                   document.body.removeChild(link)
