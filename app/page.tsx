@@ -102,9 +102,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left - Problem Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col">
+            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
               <div className="mb-8">
-                <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                   <span className="text-4xl">🤯</span>
                 </div>
                 <h3 className="text-4xl font-bold text-black leading-tight h-20">
@@ -137,9 +137,9 @@ export default function HomePage() {
             </div>
 
             {/* Right - Solution Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col">
+            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
               <div className="mb-8">
-                <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
                     alt="DPWRK"
