@@ -178,6 +178,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Privacy Section */}
+      <section className="pt-24 pb-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              Privacy First
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
+              Your data, <span className="text-orange-500">your control</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Built with privacy as the foundation, not an afterthought. Every design decision prioritizes your digital autonomy.
+            </p>
+          </div>
+          
+          {/* Main Features */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-20">
+            {/* Local Processing */}
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">Local Processing</h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-6">Everything runs on your Mac. No data leaves your device, ever.</p>
+              <div className="flex items-center text-blue-600 font-medium">
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                100% on-device AI
+              </div>
+            </div>
+
+            {/* User-Owned AI */}
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">User-Owned AI</h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-6">Bring your own Gemini API key. You control the AI, not us.</p>
+              <div className="flex items-center text-orange-600 font-medium">
+                <span className="w-2 h-2 bg-orange-600 rounded-full mr-3"></span>
+                Your API, your rules
+              </div>
+            </div>
+
+            {/* Zero Tracking */}
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L12 21l-6.364-6.364M12 21l6.364-6.364M12 21V9m6.364 9.364L21 12l-6.364-6.364M21 12H9" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-black mb-4">Zero Tracking</h3>
+              <p className="text-gray-600 leading-relaxed text-lg mb-6">No analytics, no telemetry, no behavioral profiling. Period.</p>
+              <div className="flex items-center text-green-600 font-medium">
+                <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                Tracking-free guarantee
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-gray-200 px-6 py-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
