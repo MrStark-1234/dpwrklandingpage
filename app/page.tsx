@@ -102,75 +102,75 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left - Problem Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100">
-              <div className="mb-12">
-                <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-8">
+            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col">
+              <div className="mb-8">
+                <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-6">
                   <span className="text-4xl">🤯</span>
                 </div>
-                <h3 className="text-4xl font-bold text-black leading-tight mb-8">
+                <h3 className="text-4xl font-bold text-black leading-tight h-20">
                   Focus apps are<br />f***ing chaotic
                 </h3>
               </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="space-y-6 flex-1">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">Block entire websites when you need specific content</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">Block entire websites when you need specific content</p>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">Force rigid time blocks instead of flexible sessions</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">Force rigid time blocks instead of flexible sessions</p>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">No understanding of context or what you actually need</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">No understanding of context or what you actually need</p>
                 </div>
               </div>
             </div>
 
             {/* Right - Solution Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100">
-              <div className="mb-12">
-                <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-8">
+            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col">
+              <div className="mb-8">
+                <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-6">
                   <img
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
                     alt="DPWRK"
                     className="w-12 h-12"
                   />
                 </div>
-                <h3 className="text-4xl font-bold text-black leading-tight mb-8">
+                <h3 className="text-4xl font-bold text-black leading-tight h-20">
                   DPWRK turns<br />chaos into <span className="text-orange-500">clarity</span>
                 </h3>
               </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="space-y-6 flex-1">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">Filter distractions while keeping useful content</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">Filter distractions while keeping useful content</p>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">AI understands your goals and protects your focus</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">AI understands your goals and protects your focus</p>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 min-h-[3rem]">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium">Smart blocking that adapts to what you need</p>
+                  <p className="text-lg text-gray-800 font-medium leading-snug">Smart blocking that adapts to what you need</p>
                 </div>
               </div>
             </div>
