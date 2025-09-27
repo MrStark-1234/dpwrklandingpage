@@ -248,10 +248,16 @@ export default function HomePage() {
       </section>
 
       {/* Setup Section */}
-      <section className="pt-20 pb-20 bg-white w-full">
+      <section className="pt-20 pb-20 bg-gray-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+              </svg>
+              Quick Setup
+            </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
               Get started in under 2 minutes
             </h2>
@@ -260,58 +266,15 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left - Steps */}
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg font-bold">1</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">Download and Install</h3>
-                  <p className="text-gray-600 leading-relaxed">Download DPWRK from the DMG file and complete the installation process.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg font-bold">2</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">Open Safari Extensions</h3>
-                  <p className="text-gray-600 leading-relaxed">Navigate to Safari → Preferences → Extensions to manage your browser extensions.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg font-bold">3</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">Enable DPWRK Extension</h3>
-                  <p className="text-gray-600 leading-relaxed">Find DPWRK in the extensions list, enable it, and grant the necessary permissions.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-lg font-bold">4</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-black mb-2">Set Your Goals</h3>
-                  <p className="text-gray-600 leading-relaxed">Configure your focus goals and start enjoying distraction-free browsing.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Video */}
-            <div className="relative">
+          {/* Video First */}
+          <div className="mb-16">
+            <div className="max-w-4xl mx-auto">
               <video 
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full rounded-xl shadow-2xl"
+                className="w-full rounded-2xl shadow-xl"
               >
                 <source src="/setup-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -320,6 +283,41 @@ export default function HomePage() {
               <p className="text-lg font-light text-gray-600 leading-relaxed mt-6 text-center">
                 Watch the complete setup process in action
               </p>
+            </div>
+          </div>
+
+          {/* Steps Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">Download & Install</h3>
+              <p className="text-gray-600 leading-relaxed">Download DPWRK from the DMG file and complete installation</p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">Open Extensions</h3>
+              <p className="text-gray-600 leading-relaxed">Navigate to Safari → Preferences → Extensions</p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">Enable DPWRK</h3>
+              <p className="text-gray-600 leading-relaxed">Find DPWRK and enable it with necessary permissions</p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl font-bold">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-black mb-3">Set Goals</h3>
+              <p className="text-gray-600 leading-relaxed">Configure your focus goals and start distraction-free browsing</p>
             </div>
           </div>
         </div>
