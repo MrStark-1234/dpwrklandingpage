@@ -17,19 +17,41 @@ export default function HomePage() {
               />
               <h1 className="text-xl font-semibold text-black">DPWRK</h1>
             </div>
-            <button 
-              onClick={() => {
-                const link = document.createElement('a')
-                link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
-                link.download = 'DPWRK.dmg'
-                document.body.appendChild(link)
-                link.click()
-                document.body.removeChild(link)
-              }}
-              className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
-            >
-              Download
-            </button>
+            <div className="flex items-center gap-8">
+              <nav className="hidden md:flex items-center gap-6">
+                <a 
+                  href="#about" 
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                >
+                  About
+                </a>
+                <a 
+                  href="#privacy" 
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                >
+                  Privacy
+                </a>
+                <a 
+                  href="#setup" 
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                >
+                  Setup
+                </a>
+              </nav>
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a')
+                  link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
+                  link.download = 'DPWRK.dmg'
+                  document.body.appendChild(link)
+                  link.click()
+                  document.body.removeChild(link)
+                }}
+                className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+              >
+                Download
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -98,7 +120,7 @@ export default function HomePage() {
       </main>
 
       {/* Problem Solution Section */}
-      <section className="pt-20 pb-20 bg-gray-50 w-full">
+      <section id="about" className="pt-20 pb-20 bg-gray-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left - Problem Card */}
@@ -179,7 +201,7 @@ export default function HomePage() {
       </section>
 
       {/* Privacy Section */}
-      <section className="pt-24 pb-24 bg-gradient-to-b from-white to-gray-50">
+      <section id="privacy" className="pt-24 pb-24 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-20">
@@ -248,7 +270,7 @@ export default function HomePage() {
       </section>
 
       {/* Setup Section */}
-      <section className="pt-20 pb-20 bg-gray-50 w-full">
+      <section id="setup" className="pt-20 pb-20 bg-gray-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-20">
@@ -262,7 +284,7 @@ export default function HomePage() {
               Get started in under 2 minutes
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Download includes a Safari extension. Chrome and Chromium support coming soon.
+              The download includes a Safari extension used to block distracting sites that do not align with your goals. Chrome and Chromium support coming soon.
             </p>
           </div>
           
