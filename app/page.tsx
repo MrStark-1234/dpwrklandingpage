@@ -1,8 +1,25 @@
 "use client";
 
+import { useState } from 'react'
 import { Typewriter } from "@/app/typewriter-effect"
+import EmailModal from '@/components/EmailModal'
 
 export default function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleDownload = () => {
+    const link = document.createElement('a')
+    link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
+    link.download = 'DPWRK.dmg'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  const handleEmailSuccess = () => {
+    handleDownload()
+  }
+
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Header */}
@@ -39,14 +56,7 @@ export default function HomePage() {
                 </a>
               </nav>
               <button 
-                onClick={() => {
-                  const link = document.createElement('a')
-                  link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
-                  link.download = 'DPWRK.dmg'
-                  document.body.appendChild(link)
-                  link.click()
-                  document.body.removeChild(link)
-                }}
+                onClick={() => setIsModalOpen(true)}
                 className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
               >
                 Download
@@ -77,14 +87,7 @@ export default function HomePage() {
 
                 <div className="space-y-4">
                   <button 
-                    onClick={() => {
-                      const link = document.createElement('a')
-                      link.href = 'https://github.com/MrStark-1234/DPWRK-releases/raw/main/DPWRK.dmg'
-                      link.download = 'DPWRK.dmg'
-                      document.body.appendChild(link)
-                      link.click()
-                      document.body.removeChild(link)
-                    }}
+                    onClick={() => setIsModalOpen(true)}
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 text-base"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -369,6 +372,12 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      <EmailModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSuccess={handleEmailSuccess}
+      />
     </div>
   )
 }
