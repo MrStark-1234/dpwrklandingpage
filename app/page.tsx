@@ -81,7 +81,7 @@ export default function HomePage() {
                   muted
                   loop
                   playsInline
-                  className="w-full rounded-xl shadow-2xl"
+                  className="w-full rounded-2xl shadow-xl"
                 >
                   <source src="/demo-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -268,13 +268,13 @@ export default function HomePage() {
           
           {/* Video First */}
           <div className="mb-16">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-xl mx-auto">
               <video 
                 autoPlay
                 muted
                 loop
                 playsInline
-                className="w-full rounded-2xl shadow-xl"
+                className="w-full rounded-lg shadow-lg"
               >
                 <source src="/setup-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
