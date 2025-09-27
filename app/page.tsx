@@ -70,7 +70,7 @@ export default function HomePage() {
                     </svg>
                     Download for Mac
                   </button>
-                  <p className="text-sm text-gray-500 font-normal">Free • macOS 12.0+</p>
+                  <p className="text-sm text-gray-500 font-normal"> Free • macOS 12.0+</p>
                 </div>
               </div>
 
@@ -242,6 +242,84 @@ export default function HomePage() {
                 <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                 Tracking-free guarantee
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Setup Section */}
+      <section className="pt-20 pb-20 bg-white w-full">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
+              Get started in under 2 minutes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Download includes a Safari extension. Chrome and Chromium support coming soon.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left - Steps */}
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-lg font-bold">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-2">Download and Install</h3>
+                  <p className="text-gray-600 leading-relaxed">Download DPWRK from the DMG file and complete the installation process.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-lg font-bold">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-2">Open Safari Extensions</h3>
+                  <p className="text-gray-600 leading-relaxed">Navigate to Safari → Preferences → Extensions to manage your browser extensions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-lg font-bold">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-2">Enable DPWRK Extension</h3>
+                  <p className="text-gray-600 leading-relaxed">Find DPWRK in the extensions list, enable it, and grant the necessary permissions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white text-lg font-bold">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-2">Set Your Goals</h3>
+                  <p className="text-gray-600 leading-relaxed">Configure your focus goals and start enjoying distraction-free browsing.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Video */}
+            <div className="relative">
+              <video 
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full rounded-xl shadow-2xl"
+              >
+                <source src="/setup-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              <p className="text-lg font-light text-gray-600 leading-relaxed mt-6 text-center">
+                Watch the complete setup process in action
+              </p>
             </div>
           </div>
         </div>
