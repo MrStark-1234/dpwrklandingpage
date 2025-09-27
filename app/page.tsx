@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Header */}
-      <header className="px-6 py-8">
+      <header className="px-6 py-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           
           {/* Hero Section */}
-          <section className="pt-12 pb-32 min-h-screen flex items-center">
+          <section className="py-8 min-h-[90vh] flex items-center">
             <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
               {/* Left Content */}
               <div className="space-y-8">
@@ -120,7 +120,7 @@ export default function HomePage() {
       </main>
 
       {/* Problem Solution Section */}
-      <section id="about" className="pt-20 pb-20 bg-gray-50 w-full">
+      <section id="about" className="-mt-8 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left - Problem Card */}
@@ -201,7 +201,7 @@ export default function HomePage() {
       </section>
 
       {/* Privacy Section */}
-      <section id="privacy" className="pt-24 pb-24 bg-gradient-to-b from-white to-gray-50">
+      <section id="privacy" className="pt-24 pb-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-20">
@@ -270,7 +270,7 @@ export default function HomePage() {
       </section>
 
       {/* Setup Section */}
-      <section id="setup" className="pt-20 pb-20 bg-gray-50 w-full">
+      <section id="setup" className="pt-8 pb-24 bg-gradient-to-b from-white to-gray-50 w-full">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-20">
