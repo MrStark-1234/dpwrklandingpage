@@ -128,12 +128,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             {/* Left - Problem Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
+            <div className="bg-white rounded-3xl p-6 lg:p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
               <div className="mb-8">
                 <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                   <span className="text-4xl">🤯</span>
                 </div>
-                <h3 className="text-4xl font-bold text-black leading-tight h-20">
+                <h3 className="text-2xl lg:text-4xl font-bold text-black leading-tight h-16 lg:h-20">
                   Focus apps are<br />f***ing chaotic
                 </h3>
               </div>
@@ -143,27 +143,27 @@ export default function HomePage() {
                   <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">Block entire websites when you need specific content</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Block entire websites when you need specific content</p>
                 </div>
                 
                 <div className="flex items-start gap-4 min-h-[3rem]">
                   <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">Force rigid time blocks instead of flexible sessions</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Force rigid time blocks instead of flexible sessions</p>
                 </div>
                 
                 <div className="flex items-start gap-4 min-h-[3rem]">
                   <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✗</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">No understanding of context or what you actually need</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">No understanding of context or what you actually need</p>
                 </div>
               </div>
             </div>
 
             {/* Right - Solution Card */}
-            <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
+            <div className="bg-white rounded-3xl p-6 lg:p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
               <div className="mb-8">
                 <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
                   <img
@@ -172,7 +172,7 @@ export default function HomePage() {
                     className="w-12 h-12"
                   />
                 </div>
-                <h3 className="text-4xl font-bold text-black leading-tight h-20">
+                <h3 className="text-2xl lg:text-4xl font-bold text-black leading-tight h-16 lg:h-20">
                   DPWRK turns<br />chaos into <span className="text-orange-500">clarity</span>
                 </h3>
               </div>
@@ -182,21 +182,21 @@ export default function HomePage() {
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">Filter distractions while keeping useful content</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Filter distractions while keeping useful content</p>
                 </div>
                 
                 <div className="flex items-start gap-4 min-h-[3rem]">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">AI understands your goals and protects your focus</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">AI understands your goals and protects your focus</p>
                 </div>
                 
                 <div className="flex items-start gap-4 min-h-[3rem]">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">✓</span>
                   </div>
-                  <p className="text-lg text-gray-800 font-medium leading-snug">Smart blocking that adapts to what you need</p>
+                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Smart blocking that adapts to what you need</p>
                 </div>
               </div>
             </div>
