@@ -127,4 +127,27 @@
   em {
     @apply not-italic;
   }
+
+  /* Mobile optimizations */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Touch improvements */
+  button, a, input, textarea {
+    touch-action: manipulation;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* iOS safari specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    .ios-safe-area {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
 }

@@ -21,7 +21,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       {/* Header */}
       <header className="px-6 py-6">
         <div className="max-w-7xl mx-auto">
@@ -38,26 +38,26 @@ export default function HomePage() {
               <nav className="hidden md:flex items-center gap-6">
                 <a 
                   href="#about" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
                 >
                   About
                 </a>
                 <a 
                   href="#privacy" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
                 >
                   Privacy
                 </a>
                 <a 
                   href="#setup" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
                 >
                   Setup
                 </a>
               </nav>
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="text-black hover:text-gray-600 transition-colors duration-200 font-medium"
+                className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] px-4"
               >
                 Download
               </button>
@@ -88,7 +88,7 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <button 
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 text-base"
+                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 text-base touch-manipulation min-h-[44px]"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
@@ -106,6 +106,7 @@ export default function HomePage() {
                   muted
                   loop
                   playsInline
+                  preload="metadata"
                   className="w-full rounded-2xl shadow-xl"
                 >
                   <source src="/demo-video.mp4" type="video/mp4" />
@@ -299,6 +300,7 @@ export default function HomePage() {
                 muted
                 loop
                 playsInline
+                preload="metadata"
                 className="w-full rounded-lg shadow-lg"
               >
                 <source src="/setup-video.mp4" type="video/mp4" />
