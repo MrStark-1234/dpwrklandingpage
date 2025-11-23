@@ -21,365 +21,388 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-white font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-background font-sans overflow-x-hidden text-foreground">
       {/* Header */}
-      <header className="px-6 py-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
-                alt="DPWRK"
-                className="w-8 h-8"
-              />
-              <h1 className="text-xl font-semibold text-black">DPWRK</h1>
-            </div>
-            <div className="flex items-center gap-8">
-              <nav className="hidden md:flex items-center gap-6">
-                <a 
-                  href="#about" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
-                >
-                  About
-                </a>
-                <a 
-                  href="#privacy" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
-                >
-                  Privacy
-                </a>
-                <a 
-                  href="#setup" 
-                  className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] flex items-center"
-                >
-                  Setup
-                </a>
-              </nav>
-              <button 
-                onClick={() => setIsModalOpen(true)}
-                className="text-black hover:text-gray-600 transition-colors duration-200 font-medium touch-manipulation min-h-[44px] px-4"
-              >
-                Download
-              </button>
-            </div>
+      <header className="px-6 py-6 lg:py-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between relative">
+          {/* Left: Logo */}
+          <div className="flex items-center gap-2">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
+              alt="DPWRK"
+              className="w-8 h-8"
+            />
+            <span className="text-xl font-bold tracking-tight text-foreground font-sans font-bold tracking-tight">DPWRK</span>
+          </div>
+
+          {/* Center: Navigation */}
+          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+            <a href="#about" className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-base">About</a>
+            <a href="#privacy" className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-base">Privacy</a>
+            <a href="#setup" className="text-foreground hover:text-primary transition-colors duration-200 font-medium text-base">Setup</a>
+          </nav>
+
+          {/* Right: Buttons */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="text-foreground hover:text-primary font-medium text-base hidden sm:block"
+            >
+              Sign in
+            </button>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200 font-bold text-base px-5 py-2 rounded-full"
+            >
+              Try it free
+            </button>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="px-6">
-        <div className="max-w-7xl mx-auto">
-          
-          {/* Hero Section */}
-          <section className="py-8 min-h-[90vh] flex items-center">
-            <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
-              {/* Left Content */}
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <h1 className="text-4xl lg:text-6xl font-bold text-black leading-tight">
-                    Distraction-free computing<br />across the internet
-                  </h1>
-                  
-                  <p className="text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-lg">
-                    Block around your goals, not just your time. DPWRK filters distractions inside websites so you keep the content you need—without the noise.
-                  </p>
-                </div>
+      < main className="px-6" >
+        <div className="max-w-6xl mx-auto">
 
-                <div className="space-y-4">
-                  <button 
-                    onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 text-base touch-manipulation min-h-[44px]"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                    </svg>
-                    Download for Mac
-                  </button>
-                  <p className="text-sm text-gray-500 font-normal"> Free • macOS 12.0+</p>
+          {/* Hero Section */}
+          <section className="py-20 lg:py-32 text-center relative">
+
+            {/* Background Doodles */}
+            <div className="absolute top-20 left-10 opacity-10 pointer-events-none hidden lg:block">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="currentColor" className="text-foreground">
+                <path d="M10 10 C 40 40, 60 10, 90 40" strokeWidth="2" />
+                <circle cx="50" cy="50" r="40" strokeWidth="2" strokeDasharray="5 5" />
+              </svg>
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-[1.1] font-sans font-bold tracking-tight mb-8 relative z-10">
+              <span className="relative inline-block">
+                Distraction-free
+                {/* Creative Underline */}
+                <svg className="absolute -bottom-2 left-0 w-full h-4 text-primary/40 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                </svg>
+              </span> computing<br className="hidden lg:block" /> across the internet.
+            </h1>
+
+            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12 font-light">
+              Block around your goals, not just your time. DPWRK filters distractions inside websites so you keep the content you need—without the noise.
+            </p>
+
+            <div className="flex flex-col items-center gap-6 relative z-20">
+              <div className="relative">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full font-bold text-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                  </svg>
+                  Download for Mac
+                </button>
+
+                {/* Creative Arrow & Text */}
+                <div className="absolute -right-32 top-1/2 transform -translate-y-1/2 hidden md:block rotate-6">
+                  <span className="font-marker text-foreground/60 text-lg block mb-1">It's free!</span>
+                  <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-foreground/40 -ml-4">
+                    <path d="M50 5 C 40 20, 20 20, 5 25 M 5 25 L 15 18 M 5 25 L 15 32" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </div>
               </div>
 
-              {/* Right Video */}
-              <div className="relative">
-                <video 
+              <p className="text-base text-muted-foreground">Free • macOS 12.0+</p>
+
+              {/* Product Hunt Badge */}
+              <div className="pt-8">
+                <a
+                  href="https://www.producthunt.com/products/dpwrk?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-deepwork&#0045;dpwrk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block transition-transform duration-200 hover:scale-105"
+                >
+                  <img
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1020573&theme=light&t=1759220653041"
+                    alt="Deepwork (DPWRK) - Smarter than a blocker: filters distractions, not sites | Product Hunt"
+                    className="w-[250px] h-[54px]"
+                  />
+                </a>
+              </div>
+            </div>
+
+            {/* Video with Tape & Rotation */}
+            <div className="mt-24 relative w-full max-w-5xl mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-500 group">
+                {/* Tape Effect */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-40 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rotate-1 z-10 shadow-sm"></div>
+
+                <video
+                  className="w-full h-auto"
                   autoPlay
-                  muted
                   loop
+                  muted
                   playsInline
-                  preload="metadata"
-                  className="w-full rounded-2xl shadow-xl"
+                  poster="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-02-19%20at%2011.41.05%E2%80%AFPM-w8k2r0j0j0j0j0j0j0j0j0j0j0j0j0.png"
                 >
                   <source src="/demo-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                
-                <p className="text-lg font-light text-gray-600 leading-relaxed mt-6 text-center">
-                  See DPWRK's intelligent blocking across websites like YouTube and Reddit based on user goals
-                </p>
+              </div>
+
+              <div className="absolute -bottom-8 -right-4 md:-right-12 transform rotate-3 hidden md:block">
+                <span className="font-marker text-2xl text-foreground/60">See it in action</span>
+                <svg className="w-12 h-12 absolute -top-8 -left-8 text-foreground/20 rotate-180" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                  <path d="M10 10 C 30 50, 70 50, 90 90" strokeWidth="3" strokeLinecap="round" />
+                </svg>
               </div>
             </div>
           </section>
 
         </div>
-      </main>
+      </main >
 
       {/* Problem Solution Section */}
-      <section id="about" className="-mt-8 pt-16 pb-20 bg-gradient-to-b from-white to-gray-50 w-full">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-            {/* Left - Problem Card */}
-            <div className="bg-white rounded-3xl p-6 lg:p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
-              <div className="mb-8">
-                <div className="w-20 h-20 bg-gray-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
-                  <span className="text-4xl">🤯</span>
-                </div>
-                <h3 className="text-2xl lg:text-4xl font-bold text-black leading-tight h-16 lg:h-20">
-                  Focus apps are<br />f***ing chaotic
-                </h3>
+      <section id="about" className="py-24 bg-secondary/30 border-y border-border/50 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-center relative">
+
+            {/* Creative Arrow (Hidden on mobile) */}
+            <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-foreground/20 rotate-12">
+                <path d="M5 20C20 20 40 10 90 20M90 20L80 10M90 20L80 30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            {/* Left - The Old Way */}
+            <div className="w-full md:w-1/2 max-w-md bg-muted/50 p-8 rounded-3xl transform -rotate-1 border border-border/50 relative group hover:rotate-0 transition-transform duration-300">
+              <div className="absolute -top-4 -left-4 bg-white border border-border px-4 py-2 rounded-lg shadow-sm transform -rotate-3">
+                <span className="font-marker text-xl text-muted-foreground">The Old Way</span>
               </div>
-              
-              <div className="space-y-6 flex-1">
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✗</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Block entire websites when you need specific content</p>
-                </div>
-                
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✗</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Force rigid time blocks instead of flexible sessions</p>
-                </div>
-                
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✗</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">No understanding of context or what you actually need</p>
-                </div>
+              <h3 className="text-3xl font-sans font-bold tracking-tight text-muted-foreground mb-8 mt-4 line-through decoration-2 decoration-red-400/50">
+                Focus apps are chaotic.
+              </h3>
+              <ul className="space-y-6 opacity-70">
+                <li className="flex gap-4 items-start">
+                  <span className="text-muted-foreground text-2xl font-marker leading-none">NO</span>
+                  <p className="text-lg text-muted-foreground leading-relaxed">Blocking entire sites when you need specific content.</p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="text-muted-foreground text-2xl font-marker leading-none">NO</span>
+                  <p className="text-lg text-muted-foreground leading-relaxed">Rigid time blocks that kill your flow.</p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="text-muted-foreground text-2xl font-marker leading-none">NO</span>
+                  <p className="text-lg text-muted-foreground leading-relaxed">Dumb blocking that hides helpful resources.</p>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right - The DPWRK Way */}
+            <div className="w-full md:w-1/2 max-w-md bg-background p-8 rounded-3xl transform rotate-1 border-2 border-primary/20 shadow-xl relative group hover:rotate-0 transition-transform duration-300">
+              <div className="absolute -top-5 -right-4 bg-primary text-primary-foreground px-6 py-2 rounded-full shadow-lg transform rotate-2">
+                <span className="font-marker text-xl">The DPWRK Way</span>
+              </div>
+              <h3 className="text-3xl font-sans font-bold tracking-tight text-foreground mb-8 mt-4">
+                DPWRK brings clarity.
+              </h3>
+              <ul className="space-y-6">
+                <li className="flex gap-4 items-start">
+                  <span className="text-primary text-2xl font-bold leading-none">✓</span>
+                  <p className="text-lg text-foreground leading-relaxed font-medium">Filters distractions, keeps the content.</p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="text-primary text-2xl font-bold leading-none">✓</span>
+                  <p className="text-lg text-foreground leading-relaxed font-medium">AI adapts to your goals instantly.</p>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <span className="text-primary text-2xl font-bold leading-none">✓</span>
+                  <p className="text-lg text-foreground leading-relaxed font-medium">Smart blocking that understands context.</p>
+                </li>
+              </ul>
+              <div className="absolute -bottom-6 right-8 transform rotate-3">
+                <span className="font-marker text-2xl text-primary">Much better!</span>
+                <svg className="w-12 h-12 absolute -bottom-8 -right-4 text-primary/30 -z-10" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                  <path d="M10 10 C 30 50, 70 50, 90 90" strokeWidth="5" strokeLinecap="round" />
+                </svg>
               </div>
             </div>
 
-            {/* Right - Solution Card */}
-            <div className="bg-white rounded-3xl p-6 lg:p-12 shadow-sm border border-gray-100 flex flex-col hover:shadow-lg transition-all duration-300 group">
-              <div className="mb-8">
-                <div className="w-20 h-20 bg-orange-100 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
-                    alt="DPWRK"
-                    className="w-12 h-12"
-                  />
-                </div>
-                <h3 className="text-2xl lg:text-4xl font-bold text-black leading-tight h-16 lg:h-20">
-                  DPWRK turns<br />chaos into <span className="text-orange-500">clarity</span>
-                </h3>
-              </div>
-              
-              <div className="space-y-6 flex-1">
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Filter distractions while keeping useful content</p>
-                </div>
-                
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">AI understands your goals and protects your focus</p>
-                </div>
-                
-                <div className="flex items-start gap-4 min-h-[3rem]">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-white text-sm font-bold">✓</span>
-                  </div>
-                  <p className="text-base lg:text-lg text-gray-800 font-medium leading-snug">Smart blocking that adapts to what you need</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Privacy Section */}
-      <section id="privacy" className="pt-24 pb-24 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-              Privacy First
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-black mb-6 leading-tight">
-              Your data, <span className="text-orange-500">your control</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Built with privacy as the foundation, not an afterthought. Every design decision prioritizes your digital autonomy.
-            </p>
+      <section id="privacy" className="py-24 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+          {/* Creative Elements Background */}
+          <div className="absolute top-0 right-0 md:right-20 transform rotate-12 opacity-10 pointer-events-none">
+            <span className="font-marker text-[200px] leading-none text-primary">?</span>
           </div>
-          
-          {/* Main Features */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-20">
-            {/* Local Processing */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+
+            {/* Left: Manifesto Header */}
+            <div className="lg:col-span-4 space-y-8 relative">
+              <div className="relative inline-block">
+                <span className="font-marker text-primary text-xl mb-2 block -rotate-2">The Privacy Pledge</span>
+                <h2 className="text-5xl lg:text-6xl font-sans font-bold tracking-tight text-foreground leading-[0.9]">
+                  Your data.<br />
+                  Your device.<br />
+                  <span className="text-muted-foreground">Period.</span>
+                </h2>
+                {/* Stamp */}
+                <div className="absolute -right-8 -top-8 md:-right-12 md:-top-12 transform rotate-12 z-20 opacity-90">
+                  <div className="border-4 border-primary rounded-full w-28 h-28 flex items-center justify-center bg-background/50 backdrop-blur-sm">
+                    <span className="font-marker text-primary text-lg font-bold text-center leading-tight -rotate-12">
+                      100%<br />PRIVATE
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">Local Processing</h3>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">Everything runs on your Mac. No data leaves your device, ever.</p>
-              <div className="flex items-center text-blue-600 font-medium">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                100% on-device AI
+
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                We believe privacy is a fundamental right. DPWRK is built to work for you, not to sell you.
+              </p>
+
+              {/* Signature */}
+              <div className="pt-8 border-t border-border mt-8">
+                <div className="font-marker text-2xl text-foreground/60 rotate-[-2deg]">
+                  The DPWRK Team
+                </div>
               </div>
             </div>
 
-            {/* User-Owned AI */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1721 9z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-4">User-Owned AI</h3>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">Bring your own Gemini API key. You control the AI, not us.</p>
-              <div className="flex items-center text-orange-600 font-medium">
-                <span className="w-2 h-2 bg-orange-600 rounded-full mr-3"></span>
-                Your API, your rules
-              </div>
-            </div>
+            {/* Right: 3 Columns with Dividers */}
+            <div className="lg:col-span-8 grid md:grid-cols-3 gap-8 md:gap-0">
 
-            {/* Zero Tracking */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 group">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-105 transition-transform duration-300">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L12 21l-6.364-6.364M12 21l6.364-6.364M12 21V9m6.364 9.364L21 12l-6.364-6.364M21 12H9" />
-                </svg>
+              {/* Item 1 */}
+              <div className="md:px-8 md:border-r border-border/60 space-y-4">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h3 className="text-xl font-sans font-bold tracking-tight text-foreground">Local First</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Data stays on your device. We don't see your browsing history. It never leaves your Mac.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">Zero Tracking</h3>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">No analytics, no telemetry, no behavioral profiling. Period.</p>
-              <div className="flex items-center text-green-600 font-medium">
-                <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
-                Tracking-free guarantee
+
+              {/* Item 2 */}
+              <div className="md:px-8 md:border-r border-border/60 space-y-4">
+                <div className="text-4xl mb-4">🚫</div>
+                <h3 className="text-xl font-sans font-bold tracking-tight text-foreground">Zero Tracking</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  No analytics pixel. No behavior tracking. No selling data. You are not the product.
+                </p>
               </div>
+
+              {/* Item 3 */}
+              <div className="md:px-8 space-y-4">
+                <div className="text-4xl mb-4">🔓</div>
+                <h3 className="text-xl font-sans font-bold tracking-tight text-foreground">Open Source</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our core blocking engine is open for anyone to audit. Trust through transparency.
+                </p>
+              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
       {/* Setup Section */}
-      <section id="setup" className="pt-8 pb-24 bg-gradient-to-b from-white to-gray-50 w-full">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-              </svg>
-              Quick Setup
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6 leading-tight">
-              Get started in under 2 minutes
+      <section id="setup" className="py-24 bg-secondary/30 border-t border-border/50 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+          <div className="text-center mb-16 relative">
+            <span className="font-marker text-2xl text-primary absolute -top-8 right-1/3 rotate-12 hidden md:block">It's actually this easy!</span>
+            <h2 className="text-4xl lg:text-5xl font-bold font-sans font-bold tracking-tight text-foreground mb-6">
+              Get started in minutes.
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              The download includes a Safari extension used to block distracting sites that do not align with your goals. Chrome and Chromium support coming soon.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              No complex configuration. Just install and go.
             </p>
           </div>
-          
-          {/* Video First */}
-          <div className="mb-16">
-            <div className="max-w-xl mx-auto">
-              <video 
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full rounded-lg shadow-lg"
-              >
-                <source src="/setup-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              <p className="text-lg font-light text-gray-600 leading-relaxed mt-6 text-center">
-                Watch the complete setup process in action
-              </p>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left: Video "Polaroid" */}
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-white rounded-xl shadow-xl rotate-[-2deg] transition-transform group-hover:rotate-0 duration-500"></div>
+              <div className="relative rounded-lg overflow-hidden border-4 border-white shadow-sm transform rotate-1 transition-transform group-hover:rotate-0 duration-500">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full"
+                >
+                  <source src="/setup-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              {/* Tape */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-yellow-100/80 rotate-2 shadow-sm border border-yellow-200/50 z-10"></div>
+
+              {/* Caption */}
+              <div className="absolute -bottom-12 left-10 transform -rotate-2">
+                <span className="font-marker text-muted-foreground text-xl">The Setup Flow</span>
+                <svg className="w-8 h-8 absolute -top-4 -right-8 text-muted-foreground/50" viewBox="0 0 50 50" fill="none" stroke="currentColor">
+                  <path d="M10 40 Q 25 10 40 40" strokeWidth="2" />
+                </svg>
+              </div>
             </div>
+
+            {/* Right: Steps Timeline */}
+            <div className="space-y-12 relative">
+              {/* Vertical Line */}
+              <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-border border-l-2 border-dashed border-primary/30"></div>
+
+              {[
+                { step: 1, title: "Download", desc: "Get the lightweight DMG file for macOS." },
+                { step: 2, title: "Extensions", desc: "Open Safari Preferences > Extensions." },
+                { step: 3, title: "Enable", desc: "Tick the box to enable DPWRK." },
+                { step: 4, title: "Focus", desc: "That's it. You're ready to flow." },
+              ].map((item, index) => (
+                <div key={item.step} className="relative pl-20 group">
+                  {/* Number Circle */}
+                  <div className={`absolute left-0 top-0 w-12 h-12 rounded-full border-2 flex items-center justify-center bg-background z-10 transition-transform group-hover:scale-110 ${index === 3 ? 'border-primary text-primary' : 'border-muted-foreground text-muted-foreground'}`}>
+                    <span className="font-marker text-xl">{item.step}</span>
+                  </div>
+
+                  <h3 className="text-2xl font-sans font-bold tracking-tight text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</h3>
+                  <p className="text-muted-foreground text-lg">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
           </div>
 
-          {/* Steps Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white text-2xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Download & Install</h3>
-              <p className="text-gray-600 leading-relaxed">Download DPWRK from the DMG file and complete installation</p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white text-2xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Open Extensions</h3>
-              <p className="text-gray-600 leading-relaxed">Navigate to Safari → Preferences → Extensions</p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white text-2xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Enable DPWRK</h3>
-              <p className="text-gray-600 leading-relaxed">Find DPWRK and enable it with necessary permissions</p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-              <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-white text-2xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Set Goals</h3>
-              <p className="text-gray-600 leading-relaxed">Configure your focus goals and start distraction-free browsing</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 px-6 py-12">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
-          <div className="flex items-center gap-3">
+      < footer className="py-12 border-t border-border" >
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1024x1024-AUE4NNQsn1jNa8m186wUDGRiL8r8DB.png"
               alt="DPWRK"
-              className="w-6 h-6"
+              className="w-6 h-6 grayscale opacity-50"
             />
-            <span className="text-gray-600 font-light">DPWRK</span>
+            <span className="text-muted-foreground font-medium">DPWRK</span>
           </div>
-          <div className="flex space-x-8">
-            <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200 font-light">
-              About
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200 font-light">
-              Support
-            </a>
-            <a href="#" className="text-gray-600 hover:text-black transition-colors duration-200 font-light">
-              Privacy
-            </a>
+          <div className="flex gap-8 text-muted-foreground">
+            <a href="#" className="hover:text-foreground transition-colors">About</a>
+            <a href="#" className="hover:text-foreground transition-colors">Support</a>
+            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
           </div>
         </div>
-      </footer>
+      </footer >
 
-      <EmailModal 
+      <EmailModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onSuccess={handleEmailSuccess}
       />
-    </div>
+    </div >
   )
 }
