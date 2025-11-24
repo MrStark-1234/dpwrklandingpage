@@ -130,7 +130,7 @@ export default function HomePage() {
             </div>
 
             {/* Video with Tape & Rotation */}
-            <div className="mt-24 relative w-full max-w-5xl mx-auto">
+            <div className="mt-48 lg:mt-24 relative w-full max-w-5xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-black transform -rotate-1 hover:rotate-0 transition-transform duration-500 group">
                 {/* Tape Effect */}
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-40 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rotate-1 z-10 shadow-sm"></div>
